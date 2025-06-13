@@ -7,7 +7,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useAuth } from "./AuthContext";
 
-const API_URL = "http://localhost:3004";
+const API_URL = "https://newapp2-production.up.railway.app";
 
 function CreaStanza() {
   const [roomCode, setRoomCode] = useState("");
