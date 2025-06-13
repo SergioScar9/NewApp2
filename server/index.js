@@ -13,14 +13,19 @@ const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
 
 const app = express();
 app.use(express.json());
+// Sostituisci la sezione CORS in index.js con questo:
+
 app.use(
   cors({
     origin: [
       "http://localhost:3000",
       "http://localhost:5180",
       "https://new-app2-dhk1.vercel.app",
+      "https://new-app2-dhk1-id298i7hl-sergios-projects-05d0f0e7.vercel.app",
     ],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 

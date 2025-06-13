@@ -9,18 +9,18 @@ const HomePage = () => {
         <BasicExample
           title="Scegli la categoria"
           description="Questo è il primo passo per capire la vostra compatibilità, scegli la tua categoria preferita"
-          imgSrc="\public\img\es.categorie2.png"
+          imgSrc="/src/assets/img/es.categorie2.png"
         />
         <BasicExample
           title="SKIP o WATCH"
           description="Scegli se passare il film visualizzato o mettere un WATCH,se anche qualcun'altro come te ha fatto click su WATCH, farete un match e saprete subito che film o serie guardare"
-          imgSrc="\public\img\es.card1.png"
+          imgSrc="/src/assets/img/es.card1.png"
         />
 
         <BasicExample
           title="WATCH"
           description="Ora che avete fatto WATCH-MATCH, godetevi il vostro film o serie TV insieme."
-          imgSrc="\public\img\watch1.png"
+          imgSrc="/src/assets/img/watch1.png"
         />
       </div>
     </>

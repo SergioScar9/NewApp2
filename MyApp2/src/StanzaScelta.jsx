@@ -7,7 +7,7 @@ import axios from "axios";
 import { useAuth } from "./AuthContext";
 import MatchCard from "./MatchCard";
 
-const API_URL = "http://localhost:3004";
+const API_URL = "https://newapp2-production.up.railway.app";
 
 const StanzaScelta = () => {
   const [films, setFilms] = useState();
