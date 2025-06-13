@@ -15,11 +15,7 @@ function Singup() {
     e.preventDefault();
 
     axios
-      .post("https://newapp2-production.up.railway.app", {
-        name,
-        email,
-        password,
-      })
+      .post("http://localhost:3002/register", { name, email, password })
       .then(() => {
         alert("Registrazione avvenuta con successo");
         navigate("/login");

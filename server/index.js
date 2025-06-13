@@ -8,9 +8,8 @@ const RoomSchema = require("./models/RoomSchema");
 const MONGODB_URI =
   process.env.MONGODB_URI ||
   "mongodb+srv://sergioscar94:sergios94@cluster0.i4svkus.mongodb.net/";
-const PORT = "https://newapp2-production.up.railway.app" || 3004;
-const FRONTEND_URL =
-  "https://newapp2-production.up.railway.app" || "http://localhost:3000";
+const PORT = process.env.PORT || 3004;
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
 
 const app = express();
 app.use(express.json());
