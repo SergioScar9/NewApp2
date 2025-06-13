@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "create": "^0.5.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "react-router": "^7.6.2",
+    "router-dom": "^3.0.3",
+    "vite": "^6.3.5"
+  }
+}

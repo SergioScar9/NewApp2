@@ -1,0 +1,24 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  margin-top: 20px;
+  background: #08232c;
+  padding: 2rem 1rem;
+}
+.text-center {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card-hero {
+  background-color: #08232c !important;
+  border: 2px solid #096f72 !important;
+  color: #e9dbb0 !important;
+}
+button {
+  color: #e9dbb0 !important;
+  background-color: #00555a !important;
+  border: 2px solid #096f72 !important;
+}

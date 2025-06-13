@@ -1,0 +1,32 @@
+.custom-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #096f72 !important;
+}
+
+.custom-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  flex: 1 1 auto;
+  background-color: #08232c !important;
+  color: #e3e1c9;
+  border: none !important;
+}
+
+.custom-card .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.bg-blur {
+  background-color: rgba(1, 0, 11, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.text-color {
+  color: #e3e1c9 !important;
+}
