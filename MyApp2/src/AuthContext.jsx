@@ -1,7 +1,13 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3004";
+//////////
+console.log("🔍 API_URL caricato:", import.meta.env.VITE_API_URL);
+console.log("🔍 Variabili env:", import.meta.env);
+////////////
+
+const API_URL = "https://newapp2-production.up.railway.app";
+console.log("🔍 API_URL finale che userò:", API_URL);
 
 const AuthContext = createContext();
 

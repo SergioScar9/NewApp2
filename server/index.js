@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "http://localhost:5177",
+      "http://localhost:5180",
       "https://new-app2-dhk1.vercel.app",
     ],
     credentials: true,
