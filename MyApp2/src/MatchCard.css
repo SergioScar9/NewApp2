@@ -61,7 +61,7 @@
 }
 
 .bg-img3 {
-  background-image: url("./public/Img/cinema1.jpg");
+  background-image: url("./assets/Img/cinema1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
