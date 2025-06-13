@@ -28,7 +28,34 @@ const JWT_SECRET =
   process.env.JWT_SECRET ||
   "8f9e2c1a4b6d3e7f9g0h2i5j8k1l4m7n0p3q6r9s2t5u8v1w4x7y0z3a6b9c2d5e8f";
 
-mongoose.connect(MONGODB_URI);
+// Debug delle variabili d'ambiente
+console.log("=================================");
+console.log(
+  "🔍 MONGODB_URI:",
+  process.env.MONGODB_URI ? "CONFIGURATO" : "MANCANTE"
+);
+console.log(
+  "🔍 JWT_SECRET:",
+  process.env.JWT_SECRET ? "CONFIGURATO" : "MANCANTE"
+);
+console.log("🔍 PORT:", process.env.PORT || 5000);
+console.log("=================================");
+
+// Connessione MongoDB con debug
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+  })
+  .then(() => {
+    console.log("✅ MongoDB connected successfully!");
+  })
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err.message);
+    console.error("❌ Full error:", err);
+  });
 
 //  MIDDLEWARE per verificare JWT
 const authenticateToken = (req, res, next) => {
