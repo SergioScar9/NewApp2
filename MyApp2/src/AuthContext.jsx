@@ -6,7 +6,8 @@ console.log("🔍 API_URL caricato:", import.meta.env.VITE_API_URL);
 console.log("🔍 Variabili env:", import.meta.env);
 ////////////
 
-const API_URL = "https://newapp2-production.up.railway.app";
+const API_URL =
+  "https://newapp2-production.up.railway.app" || "http://localhost:5180";
 console.log("🔍 API_URL finale che userò:", API_URL);
 
 const AuthContext = createContext();
