@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: [FRONTEND_URL, "https://new-app2-dhk1.vercel.app"],
     credentials: true,
   })
 );
