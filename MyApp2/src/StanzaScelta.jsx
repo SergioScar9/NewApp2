@@ -25,7 +25,7 @@ const StanzaScelta = () => {
 
   const { roomCode } = useParams();
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const currentUserId = user?.id;
 
   useEffect(() => {
@@ -173,6 +173,22 @@ const StanzaScelta = () => {
     }
   };
 
+  const handleLogout = () => {
+    // Conferma prima del logout
+    if (window.confirm("🚪 Sei sicuro di voler uscire?")) {
+      // Pulisci il polling
+      if (pollingInterval.current) {
+        clearInterval(pollingInterval.current);
+      }
+
+      // Esegui logout
+      logout();
+
+      // Reindirizza alla home
+      navigate("/");
+    }
+  };
+
   const handleLikeMovie = async (movie) => {
     try {
       if (likedMovies.some((m) => m.id === movie.id)) {
@@ -314,9 +330,21 @@ const StanzaScelta = () => {
   return (
     <>
       <div className="row g-4">
-        <a className="color-button" href="/">
-          <FaCircleChevronLeft className="rounded-circle m-3" size={48} />
-        </a>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <a className="color-button" href="/">
+            <FaCircleChevronLeft className="rounded-circle" size={48} />
+          </a>
+
+          <div className="d-flex align-items-center gap-3">
+            <span className="text-white">👋 {user.name}</span>
+            <button
+              className="btn btn-outline-light btn-sm rounded-pill"
+              onClick={handleLogout}
+            >
+              🚪 Esci
+            </button>
+          </div>
+        </div>
 
         <div className=" bg-button  d-flex flex-column animation-2   align-items-center p-6  rounded-5  col-12 ">
           <p className="display-2 text-color ">👤 Benvenuto, {user.name}!</p>
